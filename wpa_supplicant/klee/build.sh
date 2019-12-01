@@ -11,16 +11,6 @@ LIBRARY_FILES="./../wpa_cli.c "
 LIBRARY_FILES+="./../../src/common/cli.c "
 LIBRARY_FILES+="./../../src/utils/edit.c "
 LIBRARY_FILES+="./../../src/utils/common.c "
-#LIBRARY_FILES+="./get_opt.c "
-#LIBRARY_FILES+="./strcmp.c "
-#LIBRARY_FILES+="./strchr.c "
-#LIBRARY_FILES+="./strdup.c "
-#LIBRARY_FILES+="./strcasecmp.c "
-#LIBRARY_FILES+="./strlen.c "
-#LIBRARY_FILES+="./strncmp.c "
-#LIBRARY_FILES+="./strrchr.c "
-#LIBRARY_FILES+="./strstr.c "
-#LIBRARY_FILES+="./atoi.c "
 
 # copy compiler flags from wpa_supplicant/Makefile
 . ./../.config
