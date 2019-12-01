@@ -2,13 +2,14 @@ This is the final project of the academic course "18737 Engineering Safe Softwar
 Sillicon Valley. The purpose is to use klee & afl to test an existing open-source tool wpa_cli, which is downloaded from 
 http://w1.fi/cgit/hostap/.
 
-Before running the project, you should setup the environemt for klee.
-Here are steps I used in 18.04.1-Ubuntu.
-For more detail, please refer to the klee website https://klee.github.io/build-llvm60.
 
 ************************************************
 Environment Setup for klee
 ************************************************
+Before running the project, you should setup the environemt for klee.
+Here are steps I used in 18.04.1-Ubuntu.
+For more detail, please refer to the klee website https://klee.github.io/build-llvm60.
+
 Step 1. Install dependencies of klee 
   "sudo apt-get install build-essential curl libcap-dev git cmake libncurses5-dev python-minimal python-pip unzip libtcmalloc-minimal4 libgoogle-perftools-dev libsqlite3-dev doxygen"
   "pip3 install tabulate"
@@ -51,4 +52,21 @@ Step 4. Build klee source code
    "cp -r ./../include/klee /usr/include"
 
 
+************************************************
+Run klee.
+************************************************
+Generally speaking, we don't want to mix normal codes and test codes in the same file. To run klee test, I create a 
+wrapper at "wpa_supplicant/klee" used to connect wpa_cli.c and klee instead of changing the original file. 
+
+The klee generates the symbolic arguments for the wpa_cli. The number and the format of arguments are defined in 
+"wpa_supplicant/klee/buidl.sh". The wrapper only accepts the readable arguments.
+
+
+Step 1. Modify variable KLEE_SYMBOLIC_ENVIRONMENT in "wpa_supplicant/klee/buidl.sh" if needed.
+
+Step 2. Run "wpa_supplicant/klee/buidl.sh"
+
+Step 3. Analyze the results
+   "klee-stats klee-last"
+   "kcachegrind klee-last/run.istats"
 
