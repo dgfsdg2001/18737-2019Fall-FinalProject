@@ -1,56 +1,54 @@
-wpa_supplicant and hostapd
---------------------------
+This is the final project of the academic course "18737 Engineering Safe Software Systems" in Carnegie Mellon University 
+Sillicon Valley. The purpose is to use klee & afl to test an existing open-source tool wpa_cli, which is downloaded from 
+http://w1.fi/cgit/hostap/.
 
-Copyright (c) 2002-2019, Jouni Malinen <j@w1.fi> and contributors
-All Rights Reserved.
+Before running the project, you should setup the environemt for klee.
+Here are steps I used in 18.04.1-Ubuntu.
+For more detail, please refer to the klee website https://klee.github.io/build-llvm60.
 
-These programs are licensed under the BSD license (the one with
-advertisement clause removed).
+************************************************
+Environment Setup for klee
+************************************************
+Step 1. Install dependencies of klee 
+  "sudo apt-get install build-essential curl libcap-dev git cmake libncurses5-dev python-minimal python-pip unzip libtcmalloc-minimal4 libgoogle-perftools-dev libsqlite3-dev doxygen"
+  "pip3 install tabulate"
+  "sudo apt-get install clang-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-tools"
+  "sudo apt-get install cmake bison flex libboost-all-dev python perl minisat"
+  
+Step 2. Build STP as the constraint solver for klee
+  "git clone https://github.com/stp/stp"
+  "cd stp"
+  "mkdir build"
+  "cd build"
+  "cmake .."
+  "make -j8"
+  "sudo make install"
 
-If you are submitting changes to the project, please see CONTRIBUTIONS
-file for more instructions.
+Step 3. Build uClibc and the POSIX environment model
+  "git clone https://github.com/klee/klee-uclibc.git"
+  "cd klee-uclibc"  
+  "./configure --make-llvm-lib"
+  "make -j8"
+  
+Step 4. Build klee source code
+  "git clone https://github.com/klee/klee.git"
+  "cd klee"
+  "mkdir build"
+  "cd build"
+  "cmake \
+      -DENABLE_SOLVER_STP=ON \
+      -DENABLE_POSIX_RUNTIME=ON \
+      -DENABLE_KLEE_UCLIBC=ON \
+      -DKLEE_UCLIBC_PATH=/home/shaomin/Desktop/klee-uclibc \
+      -DENABLE_UNIT_TESTS=OFF \
+      -DENABLE_SYSTEM_TESTS=OFF \
+      -DLLVM_CONFIG_BINARY=/usr/bin/llvm-config-6.0 \
+      -DLLVMCC=/usr/bin/clang-6.0 \
+      -DLLVMCXX=/usr/bin/clang++-6.0  \
+      /home/shaomin/Desktop/klee"
+   "make -j8"
+   "cp ./bin/* /usr/bin"
+   "cp -r ./../include/klee /usr/include"
 
 
-This package may include either wpa_supplicant, hostapd, or both. See
-README file respective subdirectories (wpa_supplicant/README or
-hostapd/README) for more details.
 
-Source code files were moved around in v0.6.x releases and compared to
-earlier releases, the programs are now built by first going to a
-subdirectory (wpa_supplicant or hostapd) and creating build
-configuration (.config) and running 'make' there (for Linux/BSD/cygwin
-builds).
-
-
-License
--------
-
-This software may be distributed, used, and modified under the terms of
-BSD license:
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-1. Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
-
-3. Neither the name(s) of the above-listed copyright holder(s) nor the
-   names of its contributors may be used to endorse or promote products
-   derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
