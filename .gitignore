@@ -6,6 +6,7 @@
 *.gcov
 *.pyc
 *~
+wpa_supplicant/afl/afl-out/*
 tests/hwsim/logs
 tests/remote/logs
 wpaspy/build
