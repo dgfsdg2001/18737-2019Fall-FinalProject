@@ -70,3 +70,26 @@ Step 3. Analyze the results
    "klee-stats klee-last"
    "kcachegrind klee-last/run.istats"
 
+
+************************************************
+Environment Setup for klee
+************************************************
+Step 1. Install afl and afl-cov
+  "sudo apt-get install afl afl-cov"
+  
+
+************************************************
+Run afl.
+************************************************
+Step 1. Modify corpus file in "wpa_supplicant/afl/iput" if needed.
+
+Step 2. Use afl-gcc to re-build wpa_cli
+  "wpa_supplicant/afl/build.sh wpa_cli"
+
+Step 3. Run "wpa_supplicant/afl/buidl.sh"
+  "wpa_supplicant/afl/build.sh"
+  
+  afl may require you to modify system configurations. Use ignore arguments to bypass it.
+  "wpa_supplicant/afl/build.sh ignore"
+ 
+  
