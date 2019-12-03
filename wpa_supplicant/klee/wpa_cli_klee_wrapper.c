@@ -40,10 +40,12 @@ int main_wrapper(int argc, char** argv) {
 /* Fake Functions             */
 /******************************/
 // os_unix.c
+/*
 int os_program_init(void) {return 0;}
 int os_daemonize(const char *pid_file) {return 0;}
 void os_daemonize_terminate(const char *pid_file) {return;}
 void os_program_deinit(void) {return;}
+*/
 
 // eloop.c
 int eloop_init(void) {return 0;}
