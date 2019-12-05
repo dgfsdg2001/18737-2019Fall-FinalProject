@@ -24,7 +24,10 @@ build_wpa_cli_without_supplicant() {
     gcc ${CFLAG_WPACLI} ${INCLUDE_PATH} ${LIBRARY_FILES} ${TARGET_FILE} -o ${TARGET_FILE%.c}   
 }
 
-if test $1 = "run"
+if test $1 = "cov"
+then
+    xdg-open afl-out/cov/web/index.html
+elif test $1 = "run"
 then
     if test $2 = "ignore"
     then

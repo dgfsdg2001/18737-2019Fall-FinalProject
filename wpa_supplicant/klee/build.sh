@@ -35,11 +35,12 @@ then
     klee-replay ./${TARGET_FILE%.c}.o ./klee-last/*.ktest
     lcov --directory . --gcov-tool ./llvm-gcov-6.0.sh --capture -o cov.info
     genhtml cov.info -o output
+    xdg-open output/index.html
 else
     # Run klee
     $CLANG $CFLAG $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE
     KLEE_FLAG="-only-output-states-covering-new -optimize -libc=uclibc -posix-runtime -readable-posix-inputs -external-calls=all -entry-point=main_wrapper"
-    KLEE_SYMBOLIC_ENVIRONMENT="-sym-args 1 1 6 -iwlan0"
+    KLEE_SYMBOLIC_ENVIRONMENT="-sym-args 1 2 6 -iwlan0"
     TARGET_BC=${TARGET_FILE%.c}.bc
     INCLUDE_LIB_BC=""
     read -a lib_file_array <<< "$LIBRARY_FILES"
