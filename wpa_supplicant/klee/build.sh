@@ -25,13 +25,14 @@ fi
 
 if test $1 = "cov"
 then
+    # Remove old gocv files
     rm -f *.gcno *.gcda
+
+    # Build standalone wpa_cli without commuication between wpa_supplicant
     $CLANG $CFLAG_COV $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE -o ${TARGET_FILE%.c}.o
 
     # Replay test case and run lcov
     klee-replay ./${TARGET_FILE%.c}.o ./klee-last/*.ktest
-    
-    
     lcov --directory . --gcov-tool ./llvm-gcov-6.0.sh --capture -o cov.info
     genhtml cov.info -o output
 else
