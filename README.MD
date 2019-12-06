@@ -5,10 +5,11 @@ Please refer to http://w1.fi/cgit/hostap/ for more details about the wpa_cli/wpa
 
 
 # 1) Environment Setup
+These steps are tested under 18.04.1-Ubuntu.
+
 ## KLEE
 
-These steps are tested under 18.04.1-Ubuntu.
-Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail.
+Please refer to KLEE website https://klee.github.io for more detail.
 
 1. **Install dependencies** 
 
@@ -68,6 +69,7 @@ Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail
 </pre>
 
 ## AFL
+Please refer to https://github.com/google/AFL, https://github.com/mrash/afl-cov for more detail.
 1. **Install afl and afl-cov**
 
 <pre>
