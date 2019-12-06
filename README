@@ -1,22 +1,26 @@
-This is the final project of the academic course "18737 Engineering Safe Software Systems" in Carnegie Mellon University 
-Sillicon Valley. The purpose is to use klee & afl to test an existing open-source tool wpa_cli, which is downloaded from 
-http://w1.fi/cgit/hostap/.
+This is the final project of the academic course "18737 Engineering Safe Software Systems" 2019 Fall in 
+Carnegie Mellon University Sillicon Valley. We apply the testing tools KLEE & AFL to wpa_cli, a open-source 
+command-line interface communicates with Wi-Fi management tool wpa_supplicant. 
+Please refer to http://w1.fi/cgit/hostap/ for more details about the wpa_cli/wpa_supplicant.
 
 
-************************************************
-Environment Setup for klee
-************************************************
-Before running the project, you should setup the environemt for klee.
-Here are steps I used in 18.04.1-Ubuntu.
-For more detail, please refer to the klee website https://klee.github.io/build-llvm60.
+1) Environment Setup
+======
+KLEE
+------
+These steps are tested under 18.04.1-Ubuntu.
+Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail.
 
-Step 1. Install dependencies of klee 
-  "sudo apt-get install build-essential curl libcap-dev git cmake libncurses5-dev python-minimal python-pip unzip libtcmalloc-minimal4 libgoogle-perftools-dev libsqlite3-dev doxygen"
+1. *Install dependencies*
+  "sudo apt-get install \
+      build-essential curl libcap-dev git cmake libncurses5-dev \
+      python-minimal python-pip unzip libtcmalloc-minimal4 \
+      libgoogle-perftools-dev libsqlite3-dev doxygen"
   "pip3 install tabulate"
   "sudo apt-get install clang-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-tools"
   "sudo apt-get install cmake bison flex libboost-all-dev python perl minisat"
   
-Step 2. Build STP as the constraint solver for klee
+2. *Build STP as the constraint solver*
   "git clone https://github.com/stp/stp"
   "cd stp"
   "mkdir build"
@@ -25,13 +29,13 @@ Step 2. Build STP as the constraint solver for klee
   "make -j8"
   "sudo make install"
 
-Step 3. Build uClibc and the POSIX environment model
+3. *Build uClibc and the POSIX environment model for KLEE*
   "git clone https://github.com/klee/klee-uclibc.git"
   "cd klee-uclibc"  
   "./configure --make-llvm-lib"
   "make -j8"
   
-Step 4. Build klee source code
+4. *Build KLEE source code*
   "git clone https://github.com/klee/klee.git"
   "cd klee"
   "mkdir build"
@@ -51,6 +55,9 @@ Step 4. Build klee source code
    "cp ./bin/* /usr/bin"
    "cp -r ./../include/klee /usr/include"
 
+AFL
+------
+QQ
 
 ************************************************
 Run klee.
