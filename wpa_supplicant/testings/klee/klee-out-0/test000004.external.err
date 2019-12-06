@@ -1,0 +1,10 @@
+Error: failed external call: eloop_init
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/klee/../../wpa_cli.c
+Line: 4703
+assembly.ll line: 6912
+Stack: 
+	#000006912 in main (=3, =94848156436960) at /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/klee/../../wpa_cli.c:4703
+	#100005133 in __klee_posix_wrapped_main (=3, =94848156436960) at wpa_cli_klee_wrapper.c:29
+	#200003453 in __user_main_wrapper (=6, =94848119441536, =94848119441592) at /home/shaomin/Desktop/klee/runtime/POSIX/klee_init_env.c:245
+	#300001172 in __uClibc_main (=6, =94848119441536) at libc/misc/internals/__uClibc_main.c:401
+	#400001338 in main_wrapper (=6, =94848119441536)

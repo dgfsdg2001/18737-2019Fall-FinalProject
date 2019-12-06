@@ -1,0 +1,14 @@
+diff id:000000,orig:input -> id:000001,src:000000,op:flip1,pos:7,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: wpa_cli_cmd_otp()
+  New 'line' coverage: 1143
+  New 'line' coverage: 1148
+  New 'line' coverage: 1149
+  New 'line' coverage: 1151
+  New 'line' coverage: 3873
+  New 'line' coverage: 4673
+  New 'line' coverage: 4674
+  New 'line' coverage: 4675
+  New 'line' coverage: 4676
+  New 'line' coverage: 4677
+  New 'line' coverage: 4678

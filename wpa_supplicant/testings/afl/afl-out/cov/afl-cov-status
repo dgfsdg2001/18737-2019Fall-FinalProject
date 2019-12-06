@@ -1,0 +1,3 @@
+afl_cov_pid     : 7078
+afl_cov_version : 0.6.1
+command_line    : /usr/bin/afl-cov -v -d afl-out --overwrite --live --ignore-core-pattern --sleep 15 --coverage-cmd ./wpa_cli_afl_wrapper.o -f AFL_FILE -a -b -c --code-dir /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../..

@@ -1,0 +1,7 @@
+diff id:000007,src:000000,op:havoc,rep:8 -> id:000008,src:000000,op:havoc,rep:16
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: wpa_cli_cmd_quit()
+  New 'line' coverage: 404
+  New 'line' coverage: 406
+  New 'line' coverage: 407
+  New 'line' coverage: 409

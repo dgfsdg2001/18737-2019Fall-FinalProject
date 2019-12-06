@@ -1,0 +1,10 @@
+KLEE: Using STP solver backend
+KLEE: WorkaroundLLVMPR39177: replaced alias @putchar with clone of function @putchar_unlocked
+KLEE: WorkaroundLLVMPR39177: replaced alias @fputc with clone of function @__fputc_unlocked
+KLEE: WorkaroundLLVMPR39177: replaced alias @fputc_unlocked with clone of function @__fputc_unlocked
+KLEE: WorkaroundLLVMPR39177: replaced alias @fputs with clone of function @fputs_unlocked
+KLEE: WorkaroundLLVMPR39177: replaced alias @fwrite with clone of function @fwrite_unlocked
+KLEE: WorkaroundLLVMPR39177: replaced alias @fgetc_unlocked with clone of function @__fgetc_unlocked
+KLEE: ERROR: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/klee/../../wpa_cli.c:4703: failed external call: eloop_init
+KLEE: NOTE: now ignoring this error at this location
+KLEE: halting execution, dumping remaining states

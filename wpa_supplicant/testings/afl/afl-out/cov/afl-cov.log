@@ -1,0 +1,370 @@
+    CMD: /usr/bin/lcov --no-checksum --zerocounters --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../..
+    CMD: /usr/bin/lcov --no-checksum --capture --initial --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_base
+    Non-zero exit status '1' for CMD: /usr/bin/lcov --no-checksum --capture --initial --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_base
+
+*** Imported 10 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000000,orig:input (0 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000000,orig:input -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpBFTCe9
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpBFTCe9 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 5.6% (190 of 3376 lines)
+    functions..: 6.6% (27 of 407 functions)
+
+    Coverage diff (init) id:000000,orig:input
+diff (init) -> id:000000,orig:input
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/src/common/cli.c
+  New 'function' coverage: cli_txt_list_flush()
+  New 'line' coverage: 59
+  New 'line' coverage: 63
+  New 'line' coverage: 65
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: main()
+  New 'function' coverage: print_cmd_help()
+  New 'function' coverage: print_help()
+  New 'function' coverage: usage()
+  New 'function' coverage: wpa_cli_cleanup()
+  New 'function' coverage: wpa_cli_close_connection()
+  New 'function' coverage: wpa_cli_get_default_ifname()
+  New 'function' coverage: wpa_cli_interactive()
+  New 'function' coverage: wpa_cli_open_connection()
+  New 'function' coverage: wpa_request()
+  New 'line' coverage: 122
+  New 'line' coverage: 134
+  New 'line' coverage: 137
+  New 'line' coverage: 138
+  New 'line' coverage: 148
+  New 'line' coverage: 155
+  New 'line' coverage: 156
+  New 'line' coverage: 157
+  New 'line' coverage: 158
+  New 'line' coverage: 160
+  New 'line' coverage: 162
+  New 'line' coverage: 168
+  New 'line' coverage: 169
+  New 'line' coverage: 174
+  New 'line' coverage: 177
+  New 'line' coverage: 178
+  New 'line' coverage: 181
+  New 'line' coverage: 196
+  New 'line' coverage: 200
+  New 'line' coverage: 202
+  New 'line' coverage: 203
+  New 'line' coverage: 205
+  New 'line' coverage: 209
+  New 'line' coverage: 210
+  New 'line' coverage: 211
+  New 'line' coverage: 3689
+  New 'line' coverage: 3694
+  New 'line' coverage: 3695
+  New 'line' coverage: 3696
+  New 'line' coverage: 3697
+  New 'line' coverage: 3698
+  New 'line' coverage: 3700
+  New 'line' coverage: 3701
+  New 'line' coverage: 3704
+  New 'line' coverage: 3707
+  New 'line' coverage: 3708
+  New 'line' coverage: 3709
+  New 'line' coverage: 3710
+  New 'line' coverage: 3712
+  New 'line' coverage: 3825
+  New 'line' coverage: 3827
+  New 'line' coverage: 3829
+  New 'line' coverage: 3831
+  New 'line' coverage: 3836
+  New 'line' coverage: 3838
+  New 'line' coverage: 3841
+  New 'line' coverage: 3842
+  New 'line' coverage: 3843
+  New 'line' coverage: 3844
+  New 'line' coverage: 3846
+  New 'line' coverage: 3847
+  New 'line' coverage: 3852
+  New 'line' coverage: 3854
+  New 'line' coverage: 3857
+  New 'line' coverage: 3858
+  New 'line' coverage: 3859
+  New 'line' coverage: 3860
+  New 'line' coverage: 3861
+  New 'line' coverage: 3863
+  New 'line' coverage: 3865
+  New 'line' coverage: 3867
+  New 'line' coverage: 3868
+  New 'line' coverage: 3869
+  New 'line' coverage: 3870
+  New 'line' coverage: 3871
+  New 'line' coverage: 3876
+  New 'line' coverage: 4495
+  New 'line' coverage: 4497
+  New 'line' coverage: 4499
+  New 'line' coverage: 4500
+  New 'line' coverage: 4501
+  New 'line' coverage: 4503
+  New 'line' coverage: 4504
+  New 'line' coverage: 4505
+  New 'line' coverage: 4506
+  New 'line' coverage: 4507
+  New 'line' coverage: 4508
+  New 'line' coverage: 4509
+  New 'line' coverage: 4511
+  New 'line' coverage: 4512
+  New 'line' coverage: 4513
+  New 'line' coverage: 4514
+  New 'line' coverage: 4564
+  New 'line' coverage: 4566
+  New 'line' coverage: 4567
+  New 'line' coverage: 4570
+  New 'line' coverage: 4571
+  New 'line' coverage: 4580
+  New 'line' coverage: 4582
+  New 'line' coverage: 4643
+  New 'line' coverage: 4647
+  New 'line' coverage: 4650
+  New 'line' coverage: 4651
+  New 'line' coverage: 4653
+  New 'line' coverage: 4657
+  New 'line' coverage: 4658
+  New 'line' coverage: 4659
+  New 'line' coverage: 4660
+  New 'line' coverage: 4661
+  New 'line' coverage: 4662
+  New 'line' coverage: 4663
+  New 'line' coverage: 4679
+  New 'line' coverage: 4680
+  New 'line' coverage: 4681
+  New 'line' coverage: 4682
+  New 'line' coverage: 4689
+  New 'line' coverage: 4690
+  New 'line' coverage: 4691
+  New 'line' coverage: 4692
+  New 'line' coverage: 4693
+  New 'line' coverage: 4694
+  New 'line' coverage: 4698
+  New 'line' coverage: 4700
+  New 'line' coverage: 4701
+  New 'line' coverage: 4703
+  New 'line' coverage: 4706
+  New 'line' coverage: 4709
+  New 'line' coverage: 4711
+  New 'line' coverage: 4712
+  New 'line' coverage: 4714
+  New 'line' coverage: 4715
+  New 'line' coverage: 4717
+  New 'line' coverage: 4718
+  New 'line' coverage: 4719
+  New 'line' coverage: 4721
+  New 'line' coverage: 4722
+  New 'line' coverage: 4723
+  New 'line' coverage: 4726
+  New 'line' coverage: 4736
+  New 'line' coverage: 4739
+  New 'line' coverage: 4742
+  New 'line' coverage: 4743
+  New 'line' coverage: 4746
+  New 'line' coverage: 4747
+  New 'line' coverage: 4748
+  New 'line' coverage: 4750
+  New 'line' coverage: 81
+  New 'line' coverage: 83
+  New 'line' coverage: 97
+  New 'line' coverage: 98
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os.h
+  New 'function' coverage: os_snprintf_error()
+  New 'line' coverage: 559
+  New 'line' coverage: 561
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+  New 'function' coverage: main()
+  New 'function' coverage: parseBufToCmdsArgs()
+  New 'function' coverage: readFile()
+  New 'line' coverage: 11
+  New 'line' coverage: 13
+  New 'line' coverage: 15
+  New 'line' coverage: 19
+  New 'line' coverage: 20
+  New 'line' coverage: 23
+  New 'line' coverage: 24
+  New 'line' coverage: 25
+  New 'line' coverage: 26
+  New 'line' coverage: 27
+  New 'line' coverage: 31
+  New 'line' coverage: 32
+  New 'line' coverage: 35
+  New 'line' coverage: 40
+  New 'line' coverage: 41
+  New 'line' coverage: 42
+  New 'line' coverage: 43
+  New 'line' coverage: 46
+  New 'line' coverage: 47
+  New 'line' coverage: 48
+  New 'line' coverage: 53
+  New 'line' coverage: 54
+  New 'line' coverage: 59
+  New 'line' coverage: 60
+  New 'line' coverage: 63
+  New 'line' coverage: 66
+  New 'line' coverage: 68
+  New 'line' coverage: 73
+  New 'line' coverage: 74
+  New 'line' coverage: 75
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/list.h
+  New 'function' coverage: dl_list_empty()
+  New 'line' coverage: 49
+  New 'line' coverage: 51
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os_unix.c
+  New 'function' coverage: os_program_deinit()
+  New 'function' coverage: os_program_init()
+  New 'line' coverage: 338
+  New 'line' coverage: 368
+  New 'line' coverage: 372
+  New 'line' coverage: 394
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/wap_cli_wrapper_common.c
+  New 'function' coverage: eloop_cancel_timeout()
+  New 'function' coverage: eloop_destroy()
+  New 'function' coverage: eloop_init()
+  New 'function' coverage: eloop_register_signal_terminate()
+  New 'function' coverage: eloop_register_timeout()
+  New 'function' coverage: eloop_run()
+  New 'function' coverage: getenv()
+  New 'function' coverage: wpa_ctrl_close()
+  New 'function' coverage: wpa_ctrl_open2()
+  New 'line' coverage: 10
+  New 'line' coverage: 11
+  New 'line' coverage: 17
+  New 'line' coverage: 18
+  New 'line' coverage: 22
+  New 'line' coverage: 33
+  New 'line' coverage: 36
+  New 'line' coverage: 8
+  New 'line' coverage: 9
+
+
+
+++++++ BEGIN - first exec output for CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000000,orig:input -a -b -c
+    Open -f fail
+    Ouch! something went wrong when executing ./../../wpa_cli, Bad address
+++++++ END
+
+[+] AFL test case: id:000001,src:000000,op:flip1,pos:7,+cov (1 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000001,src:000000,op:flip1,pos:7,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpPIBoKR
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpPIBoKR /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.0% (201 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+
+    Coverage diff id:000000,orig:input id:000001,src:000000,op:flip1,pos:7,+cov
+diff id:000000,orig:input -> id:000001,src:000000,op:flip1,pos:7,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: wpa_cli_cmd_otp()
+  New 'line' coverage: 1143
+  New 'line' coverage: 1148
+  New 'line' coverage: 1149
+  New 'line' coverage: 1151
+  New 'line' coverage: 3873
+  New 'line' coverage: 4673
+  New 'line' coverage: 4674
+  New 'line' coverage: 4675
+  New 'line' coverage: 4676
+  New 'line' coverage: 4677
+  New 'line' coverage: 4678
+
+[+] AFL test case: id:000002,src:000000,op:flip1,pos:7,+cov (2 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000002,src:000000,op:flip1,pos:7,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp3KI2Ko
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp3KI2Ko /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.0% (201 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+[+] AFL test case: id:000003,src:000000,op:int8,pos:0,val:+0,+cov (3 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000003,src:000000,op:int8,pos:0,val:+0,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpU0SGL5
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpU0SGL5 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.1% (207 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+
+    Coverage diff id:000002,src:000000,op:flip1,pos:7,+cov id:000003,src:000000,op:int8,pos:0,val:+0,+cov
+diff id:000002,src:000000,op:flip1,pos:7,+cov -> id:000003,src:000000,op:int8,pos:0,val:+0,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'line' coverage: 4683
+  New 'line' coverage: 4684
+  New 'line' coverage: 4685
+  New 'line' coverage: 4686
+  New 'line' coverage: 4687
+  New 'line' coverage: 4688
+
+[+] AFL test case: id:000004,src:000000,op:int8,pos:1,val:+32,+cov (4 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000004,src:000000,op:int8,pos:1,val:+32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpKN8joQ
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpKN8joQ /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.1% (207 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+[+] AFL test case: id:000005,src:000000,op:havoc,rep:4,+cov (5 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000005,src:000000,op:havoc,rep:4,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp4bBbj2
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp4bBbj2 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.1% (207 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+[+] AFL test case: id:000006,src:000000,op:havoc,rep:4,+cov (6 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000006,src:000000,op:havoc,rep:4,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpIs0p0V
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpIs0p0V /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.2% (210 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+
+    Coverage diff id:000005,src:000000,op:havoc,rep:4,+cov id:000006,src:000000,op:havoc,rep:4,+cov
+diff id:000005,src:000000,op:havoc,rep:4,+cov -> id:000006,src:000000,op:havoc,rep:4,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'line' coverage: 4664
+  New 'line' coverage: 4665
+  New 'line' coverage: 4666
+
+[+] AFL test case: id:000007,src:000000,op:havoc,rep:8 (7 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000007,src:000000,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp28ZPtb
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp28ZPtb /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.2% (210 of 3376 lines)
+    functions..: 6.9% (28 of 407 functions)
+[+] AFL test case: id:000008,src:000000,op:havoc,rep:16 (8 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000008,src:000000,op:havoc,rep:16 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpouPaGA
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpouPaGA /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.3% (214 of 3376 lines)
+    functions..: 7.1% (29 of 407 functions)
+
+    Coverage diff id:000007,src:000000,op:havoc,rep:8 id:000008,src:000000,op:havoc,rep:16
+diff id:000007,src:000000,op:havoc,rep:8 -> id:000008,src:000000,op:havoc,rep:16
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: wpa_cli_cmd_quit()
+  New 'line' coverage: 404
+  New 'line' coverage: 406
+  New 'line' coverage: 407
+  New 'line' coverage: 409
+
+[+] AFL test case: id:000009,src:000000,op:havoc,rep:16,+cov (9 / 10), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000009,src:000000,op:havoc,rep:16,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpwDmprU
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpwDmprU /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.3% (214 of 3376 lines)
+    functions..: 7.1% (29 of 407 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[+] afl-fuzz appears to be stopped...
+[+] Processed 10 / 10 test cases.
+
+[+] Final zero coverage report: afl-out/cov/zero-cov
+[+] Final positive coverage report: afl-out/cov/pos-cov
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpn7ZyXR
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpn7ZyXR /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 6.6% (223 of 3376 lines)
+    functions..: 7.6% (31 of 407 functions)
+    CMD: /usr/bin/genhtml --output-directory afl-out/cov/web afl-out/cov/lcov/trace.lcov_info_final
+[+] Final lcov web report: afl-out/cov/web/index.html

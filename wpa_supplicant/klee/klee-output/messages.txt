@@ -1,7 +1,0 @@
-KLEE: Using STP solver backend
-KLEE: WorkaroundLLVMPR39177: replaced alias @putchar with clone of function @putchar_unlocked
-KLEE: WorkaroundLLVMPR39177: replaced alias @fputc with clone of function @__fputc_unlocked
-KLEE: WorkaroundLLVMPR39177: replaced alias @fputc_unlocked with clone of function @__fputc_unlocked
-KLEE: WorkaroundLLVMPR39177: replaced alias @fputs with clone of function @fputs_unlocked
-KLEE: WorkaroundLLVMPR39177: replaced alias @fwrite with clone of function @fwrite_unlocked
-KLEE: WorkaroundLLVMPR39177: replaced alias @fgetc_unlocked with clone of function @__fgetc_unlocked

@@ -1,0 +1,22 @@
+klee -link-llvm-lib=wpa_cli.bc -link-llvm-lib=cli.bc -link-llvm-lib=edit.bc -link-llvm-lib=common.bc -link-llvm-lib=os_unix.bc -only-output-states-covering-new -optimize -libc=uclibc -posix-runtime -readable-posix-inputs -external-calls=all -entry-point=main_wrapper wpa_cli_klee_wrapper.bc -sym-args 1 2 6 -iwlan0
+PID: 6183
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2019-12-04 21:52:50
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2019-12-04 22:34:44
+Elapsed: 00:41:54
+KLEE: done: explored paths = 31096
+KLEE: done: avg. constructs per query = 42
+KLEE: done: total queries = 1087
+KLEE: done: valid queries = 354
+KLEE: done: invalid queries = 733
+KLEE: done: query cex = 1087
+
+KLEE: done: total instructions = 743779117
+KLEE: done: completed paths = 31096
+KLEE: done: generated tests = 127
