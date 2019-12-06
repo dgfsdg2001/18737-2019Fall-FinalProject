@@ -56,7 +56,7 @@ Please refer to KLEE website https://klee.github.io for more detail.
       -DENABLE_SOLVER_STP=ON \
       -DENABLE_POSIX_RUNTIME=ON \
       -DENABLE_KLEE_UCLIBC=ON \
-      -DKLEE_UCLIBC_PATH=/home/shaomin/Desktop/klee-uclibc \
+      -DKLEE_UCLIBC_PATH=~/klee-uclibc \
       -DENABLE_UNIT_TESTS=OFF \
       -DENABLE_SYSTEM_TESTS=OFF \
       -DLLVM_CONFIG_BINARY=/usr/bin/llvm-config-6.0 \
