@@ -4,23 +4,27 @@ command-line interface communicates with Wi-Fi management tool wpa_supplicant.
 Please refer to http://w1.fi/cgit/hostap/ for more details about the wpa_cli/wpa_supplicant.
 
 
-1) Environment Setup
-======
-KLEE
-------
+# 1) Environment Setup
+## KLEE
+
 These steps are tested under 18.04.1-Ubuntu.
 Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail.
 
-1. *Install dependencies*
+1. **Install dependencies** 
+
+<pre>
   "sudo apt-get install \
-      build-essential curl libcap-dev git cmake libncurses5-dev \
-      python-minimal python-pip unzip libtcmalloc-minimal4 \
-      libgoogle-perftools-dev libsqlite3-dev doxygen"
+    build-essential curl libcap-dev git cmake libncurses5-dev \
+    python-minimal python-pip unzip libtcmalloc-minimal4 \
+    libgoogle-perftools-dev libsqlite3-dev doxygen"
   "pip3 install tabulate"
   "sudo apt-get install clang-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-tools"
   "sudo apt-get install cmake bison flex libboost-all-dev python perl minisat"
-  
-2. *Build STP as the constraint solver*
+</pre>
+
+2. **Build STP as the constraint solver**
+
+<pre>
   "git clone https://github.com/stp/stp"
   "cd stp"
   "mkdir build"
@@ -28,14 +32,20 @@ Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail
   "cmake .."
   "make -j8"
   "sudo make install"
+</pre>
 
-3. *Build uClibc and the POSIX environment model for KLEE*
+3. **Build uClibc and the POSIX environment model for KLEE**
+
+<pre>
   "git clone https://github.com/klee/klee-uclibc.git"
   "cd klee-uclibc"  
   "./configure --make-llvm-lib"
   "make -j8"
-  
-4. *Build KLEE source code*
+</pre>
+
+4. **Build KLEE source code**
+
+<pre>
   "git clone https://github.com/klee/klee.git"
   "cd klee"
   "mkdir build"
@@ -54,10 +64,19 @@ Please refer to KLEE website https://klee.github.io/build-llvm60 for more detail
    "make -j8"
    "cp ./bin/* /usr/bin"
    "cp -r ./../include/klee /usr/include"
+</pre>
 
-AFL
-------
-QQ
+## AFL
+1. **Install afl and afl-cov**
+
+<pre>
+  "sudo apt-get install afl afl-cov"
+</pre>
+
+# Run testing
+
+All added testing codes and scripts locate at wpa_supplicant/
+
 
 ************************************************
 Run klee.
