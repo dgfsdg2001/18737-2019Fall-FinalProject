@@ -39,6 +39,9 @@ then
     lcov --directory . --gcov-tool ./llvm-gcov-6.0.sh --capture -o cov.info
     genhtml cov.info -o output
     xdg-open output/index.html
+elif test $1 = "clean"
+then
+    rm -rf *.bc *.gcda *.gcno cov.info *.o output klee-last klee-out-* 
 else
     $CLANG $CFLAG $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE
     KLEE_FLAG="-only-output-states-covering-new -optimize -libc=uclibc -posix-runtime -readable-posix-inputs -external-calls=all -entry-point=main_wrapper"

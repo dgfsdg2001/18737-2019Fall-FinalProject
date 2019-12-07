@@ -33,6 +33,10 @@ build_wpa_cli_without_supplicant() {
 if test $1 = "cov"
 then
     xdg-open ${AFL_OUTPUT_DIR}/cov/web/index.html
+elif test $1 = "clean"
+then
+    rm -rf afl-out *.o *.gcda *.gcno
+    mkdir afl-out
 elif test $1 = "run"
 then
     if test $2 = "ignore"
