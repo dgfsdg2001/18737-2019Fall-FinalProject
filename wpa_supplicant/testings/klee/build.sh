@@ -26,22 +26,48 @@ then
     CFLAG_COV+="-DCONFIG_CTRL_IFACE "
 fi
 
+build_wpa_cli_without_supplicant() {
+    rm -f *.gcno *.gcda
+    $CLANG $CFLAG_COV $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE -o ${TARGET_FILE%.c}.o
+}
+
+
 if test $1 = "cov"
 then
-    # Remove old gocv files
-    rm -f *.gcno *.gcda
-
-    # Build standalone wpa_cli without commuication between wpa_supplicant
-    $CLANG $CFLAG_COV $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE -o ${TARGET_FILE%.c}.o
-
-    # Replay test case and run lcov
+    build_wpa_cli_without_supplicant
     klee-replay ./${TARGET_FILE%.c}.o ./klee-last/*.ktest
     lcov --directory . --gcov-tool ./llvm-gcov-6.0.sh --capture -o cov.info
     genhtml cov.info -o output
     xdg-open output/index.html
+elif test $1 = "cov-find"
+then
+    build_wpa_cli_without_supplicant
+    KLEE_OUT_DIR="klee-last"
+    if test $2
+    then
+        KLEE_OUT_DIR=$2
+    fi
+
+    # Replay test case by case and generate gcov for each one
+    for file in ${KLEE_OUT_DIR}/*
+    do
+        if test -z ${file##*.ktest}
+        then
+            echo "${file} is replaying..."
+            klee-replay ./${TARGET_FILE%.c}.o $file 1>>tmp.txt 2>&1
+            echo $file >> tmp.txt
+            llvm-cov-6.0 gcov wpa_cli.c >> tmp.txt
+            rm -f *.gcda
+        fi
+    done
+    echo "Replay done, show coverage results"
+    # Parse result from klee-replay & gcov
+    ./parseResult.py tmp.txt
+    rm -f tmp.txt
+
 elif test $1 = "clean"
 then
-    rm -rf *.bc *.gcda *.gcno cov.info *.o output klee-last klee-out-* 
+    rm -rf *.bc *.gcda *.gcno cov.info *.o output klee-last klee-out-* *.gcov default.profraw
 elif test $1 = "run"
 then
     KLEE_FLAG="-only-output-states-covering-new -optimize -libc=uclibc -posix-runtime -readable-posix-inputs -external-calls=all -entry-point=main_wrapper"

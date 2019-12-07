@@ -100,6 +100,18 @@ All added testing codes and scripts locate at *"wpa_supplicant/testings"* folder
   ./build cov
 </pre>
 
+4. **Find the argument list (testcase) with the largest test coverage**
+
+<pre>
+  ./build cov-find <klee-output:default is klee-last> 
+</pre>
+
+5. **Remove unnecessary file manually**
+
+<pre>
+  ./build clean 
+</pre>
+
 ## AFK
 1. **Build wpa_cli and wrapper**
 
@@ -120,3 +132,8 @@ All added testing codes and scripts locate at *"wpa_supplicant/testings"* folder
   ./build cov
 </pre>
 
+4. **Remove unnecessary file manually**
+
+<pre>
+  ./build clean 
+</pre>
