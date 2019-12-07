@@ -1,0 +1,16 @@
+# All functions / lines in this file were executed by at
+# least one AFL test case. See the cov/id-delta-cov file
+# for more information.
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/list.h
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os.h
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+    function: main()
+    function: print_cmd_help.isra.0()
+    function: print_help()
+    function: wpa_cli_get_default_ifname()
+    function: wpa_cli_open_connection()
+    function: wpa_cli_open_global_ctrl()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+    function: main()
+    function: parseBufToCmdsArgs()
+    function: readFile()

@@ -1,8 +1,0 @@
-KLEE: WARNING: undefined reference to function: puts
-KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 93990489430784) at /home/shaomin/Desktop/klee/runtime/POSIX/fd.c:991 10
-KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: vprintf(93990489352352, 93990491217344) at libc/stdio/fprintf.c:35 14
-KLEE: WARNING ONCE: calling external: puts(93990480807936) at /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/klee/../../wpa_cli.c:97 2
-KLEE: WARNING ONCE: calling external: printf(93990488849112, 93990488849096, 93990488847736) at /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/klee/../../wpa_cli.c:3692 9
-KLEE: WARNING: unlink: ignoring (EPERM)
-KLEE: WARNING: unlink: ignoring (EPERM)

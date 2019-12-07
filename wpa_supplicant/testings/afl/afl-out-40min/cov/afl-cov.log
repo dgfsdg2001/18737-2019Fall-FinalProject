@@ -1,0 +1,689 @@
+    CMD: /usr/bin/lcov --no-checksum --zerocounters --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../..
+    CMD: /usr/bin/lcov --no-checksum --capture --initial --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_base
+    Non-zero exit status '1' for CMD: /usr/bin/lcov --no-checksum --capture --initial --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_base
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000000,orig:input (0 / 1), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000000,orig:input -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpfh2El7
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpfh2El7 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 0.9% (14 of 1603 lines)
+    functions..: 1.3% (3 of 239 functions)
+
+    Coverage diff (init) id:000000,orig:input
+diff (init) -> id:000000,orig:input
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+  New 'function' coverage: main()
+  New 'function' coverage: parseBufToCmdsArgs()
+  New 'function' coverage: readFile()
+  New 'line' coverage: 11
+  New 'line' coverage: 13
+  New 'line' coverage: 15
+  New 'line' coverage: 35
+  New 'line' coverage: 40
+  New 'line' coverage: 41
+  New 'line' coverage: 42
+  New 'line' coverage: 43
+  New 'line' coverage: 63
+  New 'line' coverage: 66
+  New 'line' coverage: 68
+  New 'line' coverage: 73
+  New 'line' coverage: 74
+  New 'line' coverage: 75
+
+
+
+++++++ BEGIN - first exec output for CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000000,orig:input -a -b -c
+    Open -f fail
+    Ouch! something went wrong when executing ./../../wpa_cli, Bad address
+++++++ END
+
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 16 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000001,src:000000,op:flip1,pos:0,+cov (0 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000001,src:000000,op:flip1,pos:0,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpSkhI9t
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpSkhI9t /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+
+    Coverage diff id:000000,orig:input id:000001,src:000000,op:flip1,pos:0,+cov
+diff id:000000,orig:input -> id:000001,src:000000,op:flip1,pos:0,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os.h
+  New 'line' coverage: 561
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'function' coverage: main()
+  New 'function' coverage: print_cmd_help.isra.0()
+  New 'function' coverage: print_help()
+  New 'function' coverage: wpa_cli_get_default_ifname()
+  New 'function' coverage: wpa_cli_open_connection()
+  New 'function' coverage: wpa_cli_open_global_ctrl()
+  New 'line' coverage: 122
+  New 'line' coverage: 134
+  New 'line' coverage: 137
+  New 'line' coverage: 148
+  New 'line' coverage: 156
+  New 'line' coverage: 157
+  New 'line' coverage: 158
+  New 'line' coverage: 160
+  New 'line' coverage: 162
+  New 'line' coverage: 168
+  New 'line' coverage: 169
+  New 'line' coverage: 170
+  New 'line' coverage: 171
+  New 'line' coverage: 3689
+  New 'line' coverage: 3694
+  New 'line' coverage: 3695
+  New 'line' coverage: 3696
+  New 'line' coverage: 3697
+  New 'line' coverage: 3700
+  New 'line' coverage: 3701
+  New 'line' coverage: 3704
+  New 'line' coverage: 3707
+  New 'line' coverage: 3708
+  New 'line' coverage: 3709
+  New 'line' coverage: 3710
+  New 'line' coverage: 3712
+  New 'line' coverage: 4051
+  New 'line' coverage: 4056
+  New 'line' coverage: 4058
+  New 'line' coverage: 4059
+  New 'line' coverage: 4061
+  New 'line' coverage: 4062
+  New 'line' coverage: 4580
+  New 'line' coverage: 4582
+  New 'line' coverage: 4593
+  New 'line' coverage: 4594
+  New 'line' coverage: 4647
+  New 'line' coverage: 4650
+  New 'line' coverage: 4651
+  New 'line' coverage: 4653
+  New 'line' coverage: 4657
+  New 'line' coverage: 4658
+  New 'line' coverage: 4660
+  New 'line' coverage: 4661
+  New 'line' coverage: 4662
+  New 'line' coverage: 4663
+  New 'line' coverage: 4667
+  New 'line' coverage: 4668
+  New 'line' coverage: 4669
+  New 'line' coverage: 4670
+  New 'line' coverage: 4671
+  New 'line' coverage: 4672
+  New 'line' coverage: 4675
+  New 'line' coverage: 4676
+  New 'line' coverage: 4677
+  New 'line' coverage: 4678
+  New 'line' coverage: 4679
+  New 'line' coverage: 4680
+  New 'line' coverage: 4681
+  New 'line' coverage: 4682
+  New 'line' coverage: 4683
+  New 'line' coverage: 4684
+  New 'line' coverage: 4685
+  New 'line' coverage: 4686
+  New 'line' coverage: 4687
+  New 'line' coverage: 4688
+  New 'line' coverage: 4689
+  New 'line' coverage: 4690
+  New 'line' coverage: 4691
+  New 'line' coverage: 4694
+  New 'line' coverage: 4698
+  New 'line' coverage: 4700
+  New 'line' coverage: 4703
+  New 'line' coverage: 4706
+  New 'line' coverage: 4709
+  New 'line' coverage: 4711
+  New 'line' coverage: 4712
+  New 'line' coverage: 4714
+  New 'line' coverage: 4717
+  New 'line' coverage: 4718
+  New 'line' coverage: 4719
+  New 'line' coverage: 4721
+  New 'line' coverage: 4722
+  New 'line' coverage: 4723
+  New 'line' coverage: 83
+  New 'line' coverage: 97
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+  New 'line' coverage: 19
+  New 'line' coverage: 20
+  New 'line' coverage: 23
+  New 'line' coverage: 24
+  New 'line' coverage: 25
+  New 'line' coverage: 26
+  New 'line' coverage: 27
+  New 'line' coverage: 31
+  New 'line' coverage: 32
+  New 'line' coverage: 46
+  New 'line' coverage: 47
+  New 'line' coverage: 48
+  New 'line' coverage: 53
+  New 'line' coverage: 54
+  New 'line' coverage: 59
+  New 'line' coverage: 60
+
+[+] AFL test case: id:000002,src:000000,op:flip1,pos:1,+cov (1 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000002,src:000000,op:flip1,pos:1,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpPtrTHC
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpPtrTHC /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000003,src:000000,op:flip1,pos:1,+cov (2 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000003,src:000000,op:flip1,pos:1,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpcWgiwB
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpcWgiwB /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000004,src:000000,op:flip1,pos:1,+cov (3 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000004,src:000000,op:flip1,pos:1,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpdZqoLV
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpdZqoLV /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000005,src:000000,op:flip1,pos:6,+cov (4 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000005,src:000000,op:flip1,pos:6,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpUEK7z5
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpUEK7z5 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000006,src:000000,op:flip1,pos:7,+cov (5 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000006,src:000000,op:flip1,pos:7,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpA315Be
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpA315Be /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000007,src:000000,op:arith8,pos:1,val:-2,+cov (6 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000007,src:000000,op:arith8,pos:1,val:-2,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpwOpUyg
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpwOpUyg /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000008,src:000000,op:arith8,pos:1,val:+7,+cov (7 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000008,src:000000,op:arith8,pos:1,val:+7,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpYXBgkZ
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpYXBgkZ /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000009,src:000000,op:arith8,pos:1,val:+10,+cov (8 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000009,src:000000,op:arith8,pos:1,val:+10,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpyAdJGH
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpyAdJGH /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000010,src:000000,op:arith8,pos:1,val:+13,+cov (9 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000010,src:000000,op:arith8,pos:1,val:+13,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpTA3Dbf
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpTA3Dbf /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000011,src:000000,op:arith8,pos:1,val:-25,+cov (10 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000011,src:000000,op:arith8,pos:1,val:-25,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpbiIOpq
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpbiIOpq /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000012,src:000000,op:arith8,pos:1,val:-34,+cov (11 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000012,src:000000,op:arith8,pos:1,val:-34,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmphCmn7d
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmphCmn7d /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000013,src:000000,op:int8,pos:1,val:+0,+cov (12 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000013,src:000000,op:int8,pos:1,val:+0,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpzTkkyT
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpzTkkyT /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000014,src:000000,op:int8,pos:1,val:+32,+cov (13 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000014,src:000000,op:int8,pos:1,val:+32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpMvXpNo
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpMvXpNo /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000015,src:000000,op:int8,pos:4,val:+32,+cov (14 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000015,src:000000,op:int8,pos:4,val:+32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpX8fLEy
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpX8fLEy /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000016,src:000000,op:int8,pos:5,val:+32,+cov (15 / 17), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000016,src:000000,op:int8,pos:5,val:+32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpxrIbas
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpxrIbas /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 3 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000017,src:000000,op:havoc,rep:16,+cov (0 / 20), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000017,src:000000,op:havoc,rep:16,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp8TaeWM
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp8TaeWM /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000018,src:000000,op:havoc,rep:2,+cov (1 / 20), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000018,src:000000,op:havoc,rep:2,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpg7f19x
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpg7f19x /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000019,src:000000,op:havoc,rep:4 (2 / 20), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000019,src:000000,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp54g2lG
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp54g2lG /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000020,src:000000,op:havoc,rep:32,+cov (0 / 21), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000020,src:000000,op:havoc,rep:32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpW2U5Xr
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpW2U5Xr /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.3% (117 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 3 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000021,src:000000,op:havoc,rep:2,+cov (0 / 24), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000021,src:000000,op:havoc,rep:2,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpHS8lIQ
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpHS8lIQ /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+
+    Coverage diff id:000020,src:000000,op:havoc,rep:32,+cov id:000021,src:000000,op:havoc,rep:2,+cov
+diff id:000020,src:000000,op:havoc,rep:32,+cov -> id:000021,src:000000,op:havoc,rep:2,+cov
+Src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+  New 'line' coverage: 4701
+
+[+] AFL test case: id:000022,src:000000,op:havoc,rep:16,+cov (1 / 24), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000022,src:000000,op:havoc,rep:16,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpxB57mW
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpxB57mW /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000023,src:000000,op:havoc,rep:4 (2 / 24), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000023,src:000000,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp837Whu
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp837Whu /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 2 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000024,src:000000,op:havoc,rep:8 (0 / 26), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000024,src:000000,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp_tip1S
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp_tip1S /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000025,src:000000,op:havoc,rep:16 (1 / 26), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000025,src:000000,op:havoc,rep:16 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpb7HVgs
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpb7HVgs /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 2 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000026,src:000000,op:havoc,rep:16 (0 / 28), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000026,src:000000,op:havoc,rep:16 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpl7ngj2
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpl7ngj2 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000027,src:000000,op:havoc,rep:8 (1 / 28), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000027,src:000000,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmppNT8vu
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmppNT8vu /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000028,src:000000,op:havoc,rep:8 (0 / 29), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000028,src:000000,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp5BUltk
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp5BUltk /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000029,src:000000,op:havoc,rep:32,+cov (0 / 30), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000029,src:000000,op:havoc,rep:32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmphZj6Mg
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmphZj6Mg /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000030,src:000000,op:havoc,rep:8,+cov (0 / 31), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000030,src:000000,op:havoc,rep:8,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpJfSP4J
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpJfSP4J /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000031,src:000000,op:havoc,rep:4 (0 / 32), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000031,src:000000,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp3FEMhZ
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp3FEMhZ /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 2 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000032,src:000007,op:havoc,rep:8 (0 / 34), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000032,src:000007,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmphcoOqV
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmphcoOqV /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[+] AFL test case: id:000033,src:000007,op:havoc,rep:8 (1 / 34), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000033,src:000007,op:havoc,rep:8 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpladaEU
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpladaEU /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000034,src:000007,op:havoc,rep:4 (0 / 35), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000034,src:000007,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp9HUyyE
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp9HUyyE /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000035,src:000009,op:havoc,rep:2 (0 / 36), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000035,src:000009,op:havoc,rep:2 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpBy0gn5
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpBy0gn5 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000036,src:000017,op:flip2,pos:2 (0 / 37), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000036,src:000017,op:flip2,pos:2 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpude9pw
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpude9pw /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000037,src:000036,op:havoc,rep:4 (0 / 38), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000037,src:000036,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpzFUHJj
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpzFUHJj /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000038,src:000036,op:havoc,rep:2 (0 / 39), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000038,src:000036,op:havoc,rep:2 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpIcH_Qq
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpIcH_Qq /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000039,src:000036,op:havoc,rep:4 (0 / 40), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000039,src:000036,op:havoc,rep:4 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpc8982H
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpc8982H /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000040,src:000036,op:havoc,rep:2 (0 / 41), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000040,src:000036,op:havoc,rep:2 -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpOJNW3s
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpOJNW3s /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000041,src:000006,op:havoc,rep:4,+cov (0 / 42), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000041,src:000006,op:havoc,rep:4,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp9ziM6S
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp9ziM6S /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000042,src:000041,op:int8,pos:85,val:+32,+cov (0 / 43), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000042,src:000041,op:int8,pos:85,val:+32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpIUI8v4
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpIUI8v4 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000043,src:000041,op:int32,pos:12,val:+2147483647,+cov (0 / 44), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000043,src:000041,op:int32,pos:12,val:+2147483647,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpCU668b
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpCU668b /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000044,src:000042,op:havoc,rep:8,+cov (0 / 45), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000044,src:000042,op:havoc,rep:8,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpRDDXE7
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpRDDXE7 /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+
+*** Imported 1 new test cases from: afl-out/queue
+
+[+] AFL test case: id:000045,src:000042,op:havoc,rep:32,+cov (0 / 46), cycle: 0
+    CMD: ./wpa_cli_afl_wrapper.o -f afl-out/queue/id:000045,src:000042,op:havoc,rep:32,+cov -a -b -c
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmp8VOBEP
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmp8VOBEP /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[-] No new AFL test cases, sleeping for 15 seconds
+[+] afl-fuzz appears to be stopped...
+[+] Processed 46 / 46 test cases.
+
+[+] Final zero coverage report: afl-out/cov/zero-cov
+[+] Final positive coverage report: afl-out/cov/pos-cov
+    CMD: /usr/bin/lcov --no-checksum --capture --directory /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/../.. --output-file afl-out/cov/lcov/trace.lcov_info
+    CMD: /usr/bin/lcov --no-checksum -a afl-out/cov/lcov/trace.lcov_base -a afl-out/cov/lcov/trace.lcov_info --output-file /tmp/tmpXDkf3s
+    CMD: /usr/bin/lcov --no-checksum -r /tmp/tmpXDkf3s /usr/include/\*  --output-file afl-out/cov/lcov/trace.lcov_info_final
+    lines......: 7.4% (118 of 1603 lines)
+    functions..: 3.8% (9 of 239 functions)
+    CMD: /usr/bin/genhtml --output-directory afl-out/cov/web afl-out/cov/lcov/trace.lcov_info_final
+[+] Final lcov web report: afl-out/cov/web/index.html

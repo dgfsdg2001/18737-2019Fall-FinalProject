@@ -1,0 +1,19 @@
+diff (init) -> id:000000,orig:input
+New src file: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+  New 'function' coverage: main()
+  New 'function' coverage: parseBufToCmdsArgs()
+  New 'function' coverage: readFile()
+  New 'line' coverage: 11
+  New 'line' coverage: 13
+  New 'line' coverage: 15
+  New 'line' coverage: 35
+  New 'line' coverage: 40
+  New 'line' coverage: 41
+  New 'line' coverage: 42
+  New 'line' coverage: 43
+  New 'line' coverage: 63
+  New 'line' coverage: 66
+  New 'line' coverage: 68
+  New 'line' coverage: 73
+  New 'line' coverage: 74
+  New 'line' coverage: 75

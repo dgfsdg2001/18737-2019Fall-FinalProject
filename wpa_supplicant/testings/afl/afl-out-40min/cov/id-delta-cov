@@ -1,0 +1,10 @@
+# id:NNNNNN*_file, cycle, src_file, coverage_type, fcn/line
+id:000000,orig:input, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c, function, main()
+id:000000,orig:input, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c, function, parseBufToCmdsArgs()
+id:000000,orig:input, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c, function, readFile()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, main()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, print_cmd_help.isra.0()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, print_help()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, wpa_cli_get_default_ifname()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, wpa_cli_open_connection()
+id:000001,src:000000,op:flip1,pos:0,+cov, 0, /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c, function, wpa_cli_open_global_ctrl()
