@@ -42,8 +42,8 @@ then
 elif test $1 = "clean"
 then
     rm -rf *.bc *.gcda *.gcno cov.info *.o output klee-last klee-out-* 
-else
-    $CLANG $CFLAG $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE
+elif test $1 = "run"
+then
     KLEE_FLAG="-only-output-states-covering-new -optimize -libc=uclibc -posix-runtime -readable-posix-inputs -external-calls=all -entry-point=main_wrapper"
     KLEE_SYMBOLIC_ENVIRONMENT="-sym-args 1 2 6 -iwlan0"
     TARGET_BC=${TARGET_FILE%.c}.bc
@@ -57,4 +57,6 @@ else
         INCLUDE_LIB_BC+=${file%.c}.bc 
     done
     klee $INCLUDE_LIB_BC $KLEE_FLAG $TARGET_BC $KLEE_SYMBOLIC_ENVIRONMENT > /dev/null
+else
+    $CLANG $CFLAG $INCLUDE_PATH $LIBRARY_FILES $TARGET_FILE
 fi
