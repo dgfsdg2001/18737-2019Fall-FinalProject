@@ -112,7 +112,7 @@ All added testing codes and scripts locate at *"wpa_supplicant/testings"* folder
   ./build clean 
 </pre>
 
-## AFK
+## AFL
 1. **Build wpa_cli and wrapper**
 
 <pre>
