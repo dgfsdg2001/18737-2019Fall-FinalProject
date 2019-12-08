@@ -1,0 +1,65 @@
+# All functions / lines in this file were executed by at
+# least one AFL test case. See the cov/id-delta-cov file
+# for more information.
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/common/cli.c
+    function: cli_txt_list_flush()
+    function: write_cmd()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/wpa_cli.c
+    function: _wpa_ctrl_command()
+    function: main()
+    function: print_cmd_help()
+    function: print_help()
+    function: update_ifnames()
+    function: update_stations()
+    function: usage()
+    function: wpa_cli_action()
+    function: wpa_cli_cleanup()
+    function: wpa_cli_close_connection()
+    function: wpa_cli_cmd()
+    function: wpa_cli_cmd_blacklist()
+    function: wpa_cli_cmd_dump()
+    function: wpa_cli_cmd_help()
+    function: wpa_cli_cmd_note()
+    function: wpa_cli_cmd_otp()
+    function: wpa_cli_cmd_ping()
+    function: wpa_cli_cmd_psk_passphrase()
+    function: wpa_cli_cmd_quit()
+    function: wpa_cli_cmd_roam()
+    function: wpa_cli_cmd_scan()
+    function: wpa_cli_cmd_wps_ap_pin()
+    function: wpa_cli_get_default_ifname()
+    function: wpa_cli_interactive()
+    function: wpa_cli_open_connection()
+    function: wpa_cli_open_global_ctrl()
+    function: wpa_ctrl_command()
+    function: wpa_request()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/common.c
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os.h
+    function: os_snprintf_error()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/afl/wpa_cli_afl_wrapper.c
+    function: main()
+    function: parseBufToCmdsArgs()
+    function: readFile()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/edit.c
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/list.h
+    function: dl_list_empty()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/src/utils/os_unix.c
+    function: os_daemonize_terminate()
+    function: os_program_deinit()
+    function: os_program_init()
+File: /home/shaomin/coding/engineering_safe_sw/hostap/wpa_supplicant/testings/wap_cli_wrapper_common.c
+    function: eloop_cancel_timeout()
+    function: eloop_destroy()
+    function: eloop_init()
+    function: eloop_register_read_sock()
+    function: eloop_register_signal_terminate()
+    function: eloop_register_timeout()
+    function: eloop_run()
+    function: eloop_unregister_read_sock()
+    function: wpa_ctrl_attach()
+    function: wpa_ctrl_close()
+    function: wpa_ctrl_detach()
+    function: wpa_ctrl_get_fd()
+    function: wpa_ctrl_open()
+    function: wpa_ctrl_open2()
+    function: wpa_ctrl_request()

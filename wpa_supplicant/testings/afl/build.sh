@@ -5,6 +5,8 @@ SRC="wpa_cli_afl_wrapper.c"
 OBJ=${SRC%.c}.o
 CFLAG="-DMAX_ARGC=10 -fprofile-arcs -ftest-coverage "
 AFL_INPUT_DIR="afl-in"
+AFL_INPUT_DICT_DIR="afl-in-dict"
+AFL_INPUT_DICT="${AFL_INPUT_DICT_DIR}/wpa_cli.dict"
 AFL_OUTPUT_DIR="afl-out"
 AFL_COV_SLLEP_TIME_SEC="15"
 
@@ -47,6 +49,16 @@ then
     # ?? afl-cov does not count the coverage of wpa_cli during off-line analysis. Maybe using the execv is the problem for off-line analysis?
     gnome-terminal -- bash -c "afl-cov -v -d ${AFL_OUTPUT_DIR} --overwrite --live --ignore-core-pattern --sleep ${AFL_COV_SLLEP_TIME_SEC} --coverage-cmd \"./${OBJ} -f AFL_FILE -a -b -c\" --code-dir ${WPA_CLI_DIR};"
     afl-fuzz -i ${AFL_INPUT_DIR} -o ${AFL_OUTPUT_DIR} -- ${PWD}/${OBJ} @@
+elif test $1 = "run-dict"
+then
+    if test $2 = "ignore"
+    then
+        export AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+        export AFL_SKIP_CPUFREQ=1
+    fi
+    # ?? afl-cov does not count the coverage of wpa_cli during off-line analysis. Maybe using the execv is the problem for off-line analysis?
+    gnome-terminal -- bash -c "afl-cov -v -d ${AFL_OUTPUT_DIR} --overwrite --live --ignore-core-pattern --sleep ${AFL_COV_SLLEP_TIME_SEC} --coverage-cmd \"./${OBJ} -f AFL_FILE -a -b -c\" --code-dir ${WPA_CLI_DIR};"
+    afl-fuzz -i ${AFL_INPUT_DIR} -x ${AFL_INPUT_DICT} -o ${AFL_OUTPUT_DIR}  -- ${PWD}/${OBJ} @@
 else
     # Build wrapper with afl-gcc
     afl-gcc $CFLAG $SRC -o $OBJ   

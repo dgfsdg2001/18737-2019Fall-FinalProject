@@ -126,13 +126,19 @@ All added testing codes and scripts locate at *"wpa_supplicant/testings"* folder
   ./build run ignore
 </pre>
 
-3. **Show testing coverage**
+3. **Run AFL/AFL-COV with knowledge of arguments without chnage system settings**
+
+<pre>
+  ./build run-dict ignore
+</pre>
+
+4. **Show testing coverage**
 
 <pre>
   ./build cov
 </pre>
 
-4. **Remove unnecessary file manually**
+5. **Remove unnecessary file manually**
 
 <pre>
   ./build clean 
