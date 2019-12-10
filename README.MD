@@ -3,6 +3,8 @@ Carnegie Mellon University Sillicon Valley. We apply the testing tools KLEE & AF
 command-line interface communicates with Wi-Fi management tool wpa_supplicant. 
 Please refer to http://w1.fi/cgit/hostap/ for more details about the wpa_cli/wpa_supplicant.
 
+Also, you can access the final presentation file through the below link:
+https://docs.google.com/presentation/d/1y8cvSOFH8YyzvJJHImEA7wKj_FE1V6_OtNnYoKRzr7s/edit?usp=sharing
 
 # 1) Environment Setup
 These steps are tested under 18.04.1-Ubuntu.
